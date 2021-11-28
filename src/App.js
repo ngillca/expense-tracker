@@ -1,6 +1,7 @@
 import React from 'react'
 import ExpenseItem from './components/ExpenseItem'
 import './index.css'
+import Expenses from './components/Expenses'
 
 export default function App() {
 
@@ -26,10 +27,7 @@ export default function App() {
   ]
 
   return (
-    <div>
-      <ExpenseItem item={expenses[0]} />
-      <ExpenseItem item={expenses[1]} />
-      <ExpenseItem item={expenses[2]} />
-    </div>
+    <Expenses expenses={expenses}/>
+
   )
 }
