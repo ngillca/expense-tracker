@@ -32,12 +32,10 @@
   
   .expense-item__price {
     font-size: 1rem;
-    font-weight: bold;
-    background-color: rgb(250, 140, 100);
     border: 1px solid white;
     padding: 0.5rem !important;
-    border-radius: 10px; 
-    color: white;
+    border-radius: 4px; 
+    color: rgb(250, 140, 100) !important;
   }
   
   /*if the screen is more than 580px*/
@@ -60,13 +58,4 @@
     } 
   }
 
-  /*if the screen is 580px or less*/
-  @media (max-width: 580px) {
-    .expense-item {
-      color: pink;
-    }
-
-    button {
-     color: green;
-    }
-  }
+ 
