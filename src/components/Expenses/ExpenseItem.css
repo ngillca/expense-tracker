@@ -8,6 +8,10 @@
     color: rgb(135, 133, 133);
     
   }
+
+  .paid {
+    color: green;
+  }
   
   .expense-item__description {
     display: flex;
