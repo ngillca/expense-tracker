@@ -13,8 +13,8 @@ export default function ExpenseItem(props) {
         if (title === 'Car Insurance') {
             setTitle('Car Insurance Paid!')
         } else if (title === 'Rent') {
-            setTitle('Rent Insurance Paid!')
-        } else if (title === 'Gym Fee!') {
+            setTitle('Rent Paid!')
+        } else if (title === 'Gym Fee') {
             setTitle('Gym Fee Paid!')
         }
     }
