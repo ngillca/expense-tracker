@@ -1,0 +1,13 @@
+.main-header {
+    background-color: white;
+    margin: 1rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border: none;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(250, 140, 100) !important;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-style: italic;
+  }
+  

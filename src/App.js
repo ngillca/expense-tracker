@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 import Expenses from './components/Expenses/Expenses'
 import NewExpense from './components/NewExpense/NewExpense'
+import Header from './components/UI/Header'
 
 export default function App() {
 
@@ -28,6 +29,7 @@ export default function App() {
 
   return (
     <div>
+      <Header />
       <NewExpense />
       <Expenses items={expenses}/>
 
