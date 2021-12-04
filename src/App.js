@@ -26,10 +26,17 @@ export default function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    const newData = {
+      ...expense
+    }
+
+    console.log('data in App.js ->',newData)
+  }
   return (
     <div>
       <Header />
-      <NewExpense />
+      <NewExpense onAddExpense={ addExpenseHandler }/>
       <Expenses items={expenses} />
     </div>
   );

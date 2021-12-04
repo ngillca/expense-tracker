@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-export default function ExpenseForm() {
+export default function ExpenseForm(props) {
   // array destructuring
-  const [title, setTitle] = useState("");
-  const [amount, setAmount] = useState("");
-  const [date, setDate] = useState("");
+
+  const [enteredTitle, setTitle] = useState("");
+  const [enteredAmount, setAmount] = useState("");
+  const [enteredDate, setDate] = useState("");
 
   const titleChangeHandler = (e) => {
     setTitle(e.target.value);
@@ -20,6 +21,19 @@ export default function ExpenseForm() {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    const data = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+    };
+
+    //console.log('data in child -> ',data)
+
+    props.onSaveExpenseData(data);
+    setTitle("");
+    setAmount("");
+    setDate("");
   };
 
   return (
@@ -27,7 +41,11 @@ export default function ExpenseForm() {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -35,6 +53,7 @@ export default function ExpenseForm() {
             type="number"
             min="0.01"
             step="0.01"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -44,6 +63,7 @@ export default function ExpenseForm() {
             type="date"
             min="2021-11-29"
             max="2022-04-21"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
