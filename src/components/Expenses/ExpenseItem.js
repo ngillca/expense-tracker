@@ -21,7 +21,7 @@ export default function ExpenseItem(props) {
             <h2>{ title }</h2>
             <div className="expense-item__price">${ props.amount }</div>
         </div>
-        <button style={{'background-color': 'black', color: 'white', border: '1px solid black', 'border-radius': '6px', padding: '6px'}} onClick={ clickHandler }>Pay</button>
+        <button style={{'backgroundColor': 'black', color: 'white', border: '1px solid black', 'bordeRadius': '6px', padding: '6px'}} onClick={ clickHandler }>Pay</button>
         </Card>
         </>
     )
