@@ -37,7 +37,7 @@ export default function App() {
     <div>
       <Header />
       <NewExpense onAddExpense={ addExpenseHandler }/>
-      <Expenses items={expenses} />
+      <Expenses  items={expenses} />
     </div>
   );
 }

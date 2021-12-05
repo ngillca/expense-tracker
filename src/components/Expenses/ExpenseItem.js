@@ -13,9 +13,13 @@ export default function ExpenseItem(props) {
     setTitle("Paid");
   };
 
+  const alertFunc = () => {
+    console.log(props.item)
+  }
   return (
     <>
-      <Card className="expense-item">
+    <div onClick={ alertFunc }>
+      <Card  className="expense-item">
         <ExpenseDate id="oop" date={props.date} />
         <div className="expense-item__description ">
           <h2>{title}</h2>
@@ -33,7 +37,9 @@ export default function ExpenseItem(props) {
         >
           Pay
         </button>
+        <Dashboard />
       </Card>
+      </div>
     </>
   );
 }

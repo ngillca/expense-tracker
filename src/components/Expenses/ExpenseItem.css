@@ -6,11 +6,15 @@
     margin: 1rem;
     background-color: white;
     color: rgb(135, 133, 133);
-    border: 1px solid coral;
+    
   }
 
-
- 
+  .expense-item:hover {
+    border: 1px solid coral;
+  }
+  .expense-item:hover .expense-date{
+    background-color: coral;
+  }
   .paid {
     color: green;
   }
