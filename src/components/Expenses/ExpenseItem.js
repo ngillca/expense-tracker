@@ -37,7 +37,7 @@ export default function ExpenseItem(props) {
         >
           Pay
         </button>
-        <Dashboard />
+   
       </Card>
       </div>
     </>
