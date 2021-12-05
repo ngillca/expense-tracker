@@ -4,23 +4,24 @@
     width: 5.5rem;
     height: 5.5rem;
     border: 1px solid #ececec;
-    background-color: rgb(226, 188, 174);
+    background-color: coral;
     color: white;
     border-radius: 12px;
     align-items: center;
     justify-content: center;
+    
   }
 
-  .expense-date:hover {
-    background-color:  rgb(250, 140, 100) !important;
-    border-color: #fbfbfb;
-  }
+
   
   .expense-date__month {
     font-size: 0.75rem;
     font-weight: bold;
   }
   
+  #oop {
+    color: green !important;
+  }
   .expense-date__year {
     font-size: 0.75rem;
   }

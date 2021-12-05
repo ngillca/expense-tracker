@@ -15,7 +15,7 @@
     cursor: pointer;
     padding: 1rem 2rem;
     border: 1px solid white;
-    background-color: rgb(226, 188, 174);
+    background-color: coral;
     color: white;
     border-radius: 12px;
     margin-right: 1rem;
@@ -23,7 +23,7 @@
   
   .new-expense button:hover,
   .new-expense button:active {
-    background-color:  rgb(250, 140, 100) !important;
+    background-color:  rgb(255, 202, 182) !important;
     border-color: #fbfbfb;
   }
   
