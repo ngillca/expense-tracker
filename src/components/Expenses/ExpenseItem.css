@@ -9,6 +9,10 @@
     
   }
 
+  .expense-item:hover {
+    border: 1px solid rgb(250, 140, 100);
+  }
+
   .paid {
     color: green;
   }

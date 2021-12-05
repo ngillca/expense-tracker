@@ -4,11 +4,16 @@
     width: 5.5rem;
     height: 5.5rem;
     border: 1px solid #ececec;
-    background-color: rgb(196, 191, 191);
+    background-color: rgb(226, 188, 174);
     color: white;
     border-radius: 12px;
     align-items: center;
     justify-content: center;
+  }
+
+  .expense-date:hover {
+    background-color:  rgb(250, 140, 100) !important;
+    border-color: #fbfbfb;
   }
   
   .expense-date__month {
