@@ -2,12 +2,17 @@ import React from "react";
 
 import "./ExpensesFilter.css";
 
-const ExpensesFilter = () => {
+const ExpensesFilter = (props) => {
+
+  const monthChangeHandler = (e) => {
+    props.collectFilterData(e.target.value)
+  }
+
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
         <label>Month</label>
-        <select>
+        <select value={ props.defaultMonth } onChange={ monthChangeHandler }>
           <option value="0">January</option>
           <option value="1">Feburary</option>
           <option value="2">March</option>

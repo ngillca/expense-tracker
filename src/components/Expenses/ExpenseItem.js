@@ -6,22 +6,21 @@ import Dashboard from "../UI/Dashboard";
 
 export default function ExpenseItem(props) {
   // array destructuring [0] current title [1] function name to set new title
-  const [title, setTitle] = useState(props.title);
-  // temporarily changes value until next reload
+  // const [title, setTitle] = useState(props.title);
+  // // temporarily changes value until next reload
   // but when state changes React will reload the current component
-  const clickHandler = () => {
-    setTitle("Paid");
-  };
 
-  const alertFunc = () => {
-    console.log(props.item)
+  const [title, setTitle] = useState(props.title)
+  const clickHandler = () => {
+    setTitle('Paid')
   }
   return (
     <>
-    <div onClick={ alertFunc }>
+    <div >
       <Card  className="expense-item">
-        <ExpenseDate id="oop" date={props.date} />
+        <ExpenseDate  date={props.date} />
         <div className="expense-item__description ">
+          {/* <h2>{title}</h2> */}
           <h2>{title}</h2>
           <div className="expense-item__price">${props.amount}</div>
         </div>
@@ -33,7 +32,7 @@ export default function ExpenseItem(props) {
             borderRadius: "6px",
             padding: "6px",
           }}
-          onClick={clickHandler}
+           onClick={clickHandler}
         >
           Pay
         </button>

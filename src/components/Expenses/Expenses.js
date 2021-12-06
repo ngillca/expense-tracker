@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Expenses.css";
 import "./ExpenseItem.css";
 import ExpenseItem from "./ExpenseItem";
@@ -6,30 +6,31 @@ import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 
 export default function Expenses(props) {
+  const getDate = new Date();
+  const currentMonth = getDate.getMonth();
+
+  // array destructuring to refresh on date change
+  const [enteredMonth, setMonth] = useState(currentMonth);
+
+  const filterDataHandler = (selectedMonth) => {
+    setMonth(parseInt(selectedMonth));
+  };
+
   return (
     <>
       <Card className="expenses">
-        <ExpensesFilter />
-        <ExpenseItem
-          title={props.items[0].title}
-          amount={props.items[0].amount}
-          date={props.items[0].date}
-          item={props.items[0]}
+        <ExpensesFilter
+          defaultMonth={enteredMonth}
+          collectFilterData={filterDataHandler}
         />
-
-        <ExpenseItem
-          title={props.items[1].title}
-          amount={props.items[1].amount}
-          date={props.items[1].date}
-          item={props.items[1]}
-        />
-
-        <ExpenseItem
-          title={props.items[2].title}
-          amount={props.items[2].amount}
-          date={props.items[2].date}
-          item={props.items[2]}
-        />
+        {props.items.map((expense) => (
+          <ExpenseItem
+            key={Math.random().toString()}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
       </Card>
     </>
   );
