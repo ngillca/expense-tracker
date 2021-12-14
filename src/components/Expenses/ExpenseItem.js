@@ -16,7 +16,7 @@ export default function ExpenseItem(props) {
   }
   return (
     <>
-    <div >
+    <li>
       <Card  className="expense-item">
         <ExpenseDate  date={props.date} />
         <div className="expense-item__description ">
@@ -38,7 +38,7 @@ export default function ExpenseItem(props) {
         </button>
    
       </Card>
-      </div>
+      </li>
     </>
   );
 }
