@@ -13,6 +13,7 @@ const ExpensesFilter = (props) => {
       <div className="expenses-filter__control">
         <label>Month</label>
         <select value={ props.defaultMonth } onChange={ monthChangeHandler }>
+          <option value="-1">Show all</option>
           <option value="0">January</option>
           <option value="1">Feburary</option>
           <option value="2">March</option>

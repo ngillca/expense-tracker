@@ -7,19 +7,19 @@ import Header from "./components/UI/Header";
 const STATIC_EXPENSES = [
   {
     id: "i1",
-    title: "Car Insurance",
+    title: "Car Insurance 🚙",
     amount: 500.21,
     date: new Date(2021, 11, 12),
   },
   {
     id: "i2",
-    title: "Gym Fee",
+    title: "Gym Fee 🏃‍♀️",
     amount: 19.99,
     date: new Date(2021, 11, 15),
   },
   {
     id: "i3",
-    title: "Rent",
+    title: "Rent 🏡 ",
     amount: 2600.0,
     date: new Date(2021, 11, 1),
   },

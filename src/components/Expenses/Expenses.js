@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Expenses.css";
 import "./ExpenseItem.css";
-import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
+import './ExpensesList'
+import ExpensesList from "./ExpensesList";
 
 export default function Expenses(props) {
   const getDate = new Date();
@@ -16,21 +17,25 @@ export default function Expenses(props) {
     setMonth(parseInt(selectedMonth));
   };
 
+  // filter returns a subset of an array from
+  // a bigger array given some condition is true
+  const filteredExpenses = props.items.filter(expense => {
+    if (enteredMonth === -1) {
+      return props.items
+    }
+    return expense.date.getMonth() === enteredMonth;
+  })
+
+
+  
   return (
     <>
-      <Card className="expenses">
+    <Card className="expenses">
         <ExpensesFilter
           defaultMonth={enteredMonth}
           collectFilterData={filterDataHandler}
         />
-        {props.items.map((expense) => (
-          <ExpenseItem
-            key={Math.random().toString()}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
+        <ExpensesList items={filteredExpenses} />
       </Card>
     </>
   );
