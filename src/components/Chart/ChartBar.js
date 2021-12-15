@@ -3,7 +3,7 @@ import './ChartBar.css'
 
 export default function ChartBar(props) {
 
-    let barFillHeight = '0%';
+    let barFillHeight = '40%';
 
     if (props.maxValue > 0) {
         barFillHeight = Math.round((props.value / props.maxValue) * 100) + '%';
@@ -12,7 +12,7 @@ export default function ChartBar(props) {
     return (
         <div className="chart-bar">
             <div className="chart-bar__inner">
-                <div className="char-bar__fill" style={{ height: '10rem' }}>
+                <div className="chart-bar__fill" style={{ height: barFillHeight }}>
 
                 </div>
             </div>
