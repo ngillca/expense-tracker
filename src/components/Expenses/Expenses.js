@@ -5,6 +5,7 @@ import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import './ExpensesList'
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 export default function Expenses(props) {
   const getDate = new Date();
@@ -35,6 +36,7 @@ export default function Expenses(props) {
           defaultMonth={enteredMonth}
           collectFilterData={filterDataHandler}
         />
+        <ExpensesChart expenses={filteredExpenses} />
         <ExpensesList items={filteredExpenses} />
       </Card>
     </>

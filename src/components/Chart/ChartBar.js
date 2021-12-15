@@ -1,7 +1,7 @@
 import React from 'react'
 import './ChartBar.css'
 
-export default function ChartBar() {
+export default function ChartBar(props) {
 
     let barFillHeight = '0%';
 
