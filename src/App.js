@@ -23,6 +23,30 @@ const STATIC_EXPENSES = [
     amount: 2600.0,
     date: new Date(2021, 11, 1),
   },
+  {
+    id: "i4",
+    title: "AirBnb 🛏 ",
+    amount: 4600.0,
+    date: new Date(2021, 0, 21),
+  },
+  {
+    id: "i6",
+    title: "Hot Chocolate 🍫 ",
+    amount: 8600.0,
+    date: new Date(2021, 1, 15),
+  },
+  {
+    id: "i6",
+    title: "Rent 🏡 ",
+    amount: 3600.0,
+    date: new Date(2021, 2, 15),
+  },
+  {
+    id: "i7",
+    title: "Decor 🛋  ",
+    amount: 2600.0,
+    date: new Date(2021, 3, 23),
+  },
 ];
 
 export default function App() {
